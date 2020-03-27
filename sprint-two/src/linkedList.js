@@ -12,7 +12,6 @@ var LinkedList = function() {
       list.tail.next = newNode;
       list.tail = newNode;
     }
-
   };
 
   list.removeHead = function() {
@@ -35,7 +34,6 @@ var LinkedList = function() {
     };
     return isNode(list.head);
   };
-
   return list;
 };
 
