@@ -4,7 +4,7 @@ var LinkedList = function() {
   list.tail = null;
 
   list.addToTail = function(value) {
-    var newNode = new Node(value); // I like this
+    var newNode = new Node(value);
     if ((list.head === null)) {
       list.head = newNode;
       list.tail = list.head;
@@ -24,24 +24,16 @@ var LinkedList = function() {
     return formerHead.value;
   };
 
-  list.contains = function(target) { //recursively check head, if not head move on to head.next > head.next.next > head.next.next.next
-    var start = list.head;
-    while (start) {
-      if (start.value === target) {
+  list.contains = function(target) {
+    var isNode = function(node) {
+      if (node.value === target) {
         return true;
+      } else if (node.next === null) {
+        return false;
       }
-      start = start.next;
-    }
-    return false;
-    // if (start.value = target) {
-    //   return true;
-    // }
-    // for (var i = 0; i < list.size; i++) {
-    //   start = start.next
-    // }
-    // start = start.next;
-    // return false;
-    // return _.contains(list, target); // only works with array
+      return isNode(node.next);
+    };
+    return isNode(list.head);
   };
 
   return list;
