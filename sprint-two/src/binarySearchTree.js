@@ -54,4 +54,7 @@ binaryTreeMethods.depthFirstLog = function(func) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
- */
+  insert() complexity = logarithmic O(log n)
+  contains() complexity = logarithmic O(log n)
+  depthFirstLog() complexity = logarithmic O(log n)
+  */

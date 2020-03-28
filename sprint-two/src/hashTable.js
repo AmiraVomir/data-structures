@@ -5,10 +5,9 @@ var HashTable = function() {
 HashTable.prototype.insert = function(k, v) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   var storageArr = this._storage.get(index);
-  if (!storageArr) {
+  if (storageArr === undefined) {
     var bucket = [];
-    var tuple = [k,v];
-    bucket.push(tuple);
+    bucket.push([k, v]);
     this._storage.set(index, bucket);
   } else if (storageArr.length > 0) {
     var exist = false;
@@ -44,4 +43,7 @@ HashTable.prototype.remove = function(k) {
 };
 /*
  * Complexity: What is the time complexity of the above functions?
+ insert() complexity = linear O(n)
+ retrieve() complexity = linear O(n)
+ remove() complexity = linear O()
  */

@@ -59,4 +59,11 @@ Graph.prototype.forEachNode = function(cb) {
 };
 /*
  * Complexity: What is the time complexity of the above functions?
+ addNode() complexity = constant O(1)
+ contains() complexity = constant O(1)
+ removeNode() complexity = linear O(n)
+ hasEdge() complexity = linear O(n)
+ addEdge() complexity = constant O(1)
+ removeEdge() complexity = linear O(n)
+ forEachNode() complexity = linear O(n)
  */
