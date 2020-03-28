@@ -68,4 +68,18 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+  //Our test
+  it('should create multiple edges across multiple nodes', function() {
+    graph.addNode(5);
+    graph.addNode(2);
+    graph.addNode(1);
+    graph.addNode(3);
+    graph.addEdge(5, 1);
+    graph.addEdge(5, 2);
+    graph.addEdge(5, 3);
+    expect(graph.hasEdge(5, 1)).to.equal(true);
+    expect(graph.hasEdge(5, 2)).to.equal(true);
+    expect(graph.hasEdge(5, 3)).to.equal(true);
+  });
 });
