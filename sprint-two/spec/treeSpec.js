@@ -41,4 +41,12 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  //Our Test
+  it('should return false for unadded nested children', function() {
+    tree.addChild(5);
+    tree.addChild(6);
+    tree.children[0].addChild(4);
+    expect(tree.contains(3)).to.equal(false);
+  });
+
 });

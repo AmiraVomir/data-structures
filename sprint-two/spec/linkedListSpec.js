@@ -52,4 +52,11 @@ describe('linkedList', function() {
   });
 
   // add more tests here to test the functionality of linkedList
+  //Our test
+  it('should assign head and tail when only one value inputed', function() {
+    linkedList.addToTail(4);
+    expect(linkedList.head.value).to.equal(4);
+    expect(linkedList.tail.value).to.equal(4);
+  });
+
 });

@@ -24,4 +24,11 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  //Our Test
+  it('should return removed value', function() {
+    set.add('StringA');
+    set.add('StringB');
+    expect(set.remove('StringB')).to.equal('StringB');
+  });
+
 });

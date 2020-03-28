@@ -40,6 +40,7 @@ HashTable.prototype.remove = function(k) {
       storageArr.splice(i, 2);
     }
   }
+  return k;
 };
 /*
  * Complexity: What is the time complexity of the above functions?
