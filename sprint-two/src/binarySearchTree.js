@@ -10,17 +10,19 @@ var BinarySearchTree = function(value) {
 var binaryTreeMethods = {};
 
 binaryTreeMethods.insert = function(value) {
-  if (this['value'] > value) {
-    if (this.left !== undefined) {
-      this.left.insert(value);
+  if (this['value'] !== value) {
+    if (this['value'] > value) {
+      if (this.left !== undefined) {
+        this.left.insert(value);
+      } else {
+        this.left = BinarySearchTree(value);
+      }
     } else {
-      this.left = BinarySearchTree(value);
-    }
-  } else {
-    if (this.right !== undefined) {
-      this.right.insert(value);
-    } else {
-      this.right = BinarySearchTree(value);
+      if (this.right !== undefined) {
+        this.right.insert(value);
+      } else {
+        this.right = BinarySearchTree(value);
+      }
     }
   }
 };
